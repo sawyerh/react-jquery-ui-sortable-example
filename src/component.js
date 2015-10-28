@@ -2,17 +2,17 @@ var SortableList = React.createClass({
   getInitialState() {
     return {
       items: [{
-        id: 301,
+        id: 'a',
         position: 0,
-        content: 'Abc'
+        content: 'Adam'
       }, {
-        id: 302,
+        id: 'b',
         position: 1,
-        content: 'Def'
+        content: 'Betty'
       }, {
-        id: 303,
+        id: 'c',
         position: 2,
-        content: 'Ghi'
+        content: 'Charlie'
       }]
     };
   },
@@ -30,7 +30,7 @@ var SortableList = React.createClass({
     var ids = $node.sortable('toArray', { attribute: 'data-id' });
 
     ids.forEach((id, index) => {
-      var field = _.findWhere(newItems, {id: parseInt(id)});
+      var field = _.findWhere(newItems, {id: id});
       field.position = index;
     });
 
@@ -45,7 +45,9 @@ var SortableList = React.createClass({
     return items.map((item) => {
       return (
         <li key={item.id} data-id={item.id}>
-          {item.content}
+          <strong>{item.content}</strong>
+          <br/>
+          id: {item.id} &bull; position: {item.position}
         </li>
       )
     })

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <title>React + jQuery UI Sortable Example</title>
   <style type="text/css">
     #list{
@@ -11,9 +12,15 @@
 
     li{
       border: 2px solid #000;
+      padding: 10px;
       margin: 0 0 10px;
-      padding: 0;
       cursor: move;
+      list-style: none;
+    }
+
+    .ui-sortable-placeholder{
+      visibility: visible !important;
+      border: 2px solid green;
     }
   </style>
 </head>
