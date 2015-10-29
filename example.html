@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <title>React + jQuery UI Sortable Example</title>
   <style type="text/css">
+    body{
+      color: #fff;
+      font-family: Helvetica, sans-serif;
+      font-size: 20px;
+    }
     #list{
       max-width: 500px;
       margin: 100px auto;
@@ -11,16 +16,28 @@
     }
 
     li{
-      border: 2px solid #000;
       padding: 10px;
       margin: 0 0 10px;
       cursor: move;
       list-style: none;
+      border-radius: 3px;
+    }
+
+    li[data-id="a"]{
+      background-color: #F44336;
+    }
+
+    li[data-id="b"]{
+      background-color: #2196F3;
+    }
+
+    li[data-id="c"]{
+      background-color: #009688;
     }
 
     .ui-sortable-placeholder{
       visibility: visible !important;
-      border: 2px solid green;
+      border: 2px dashed #000;
     }
   </style>
 </head>

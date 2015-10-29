@@ -30,8 +30,8 @@ var SortableList = React.createClass({
     var ids = $node.sortable('toArray', { attribute: 'data-id' });
 
     ids.forEach((id, index) => {
-      var field = _.findWhere(newItems, {id: id});
-      field.position = index;
+      var item = _.findWhere(newItems, {id: id});
+      item.position = index;
     });
 
     // Lets React reorder the DOM
